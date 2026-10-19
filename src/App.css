@@ -1,0 +1,258 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #183b2a;
+  background: #f5faf5;
+}
+
+a {
+  text-decoration: none;
+}
+
+.landing-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image:
+    linear-gradient(rgba(20, 70, 40, 0.25), rgba(20, 70, 40, 0.25)),
+    url("https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+  padding: 24px;
+}
+
+.landing-content {
+  max-width: 620px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 50px 40px;
+  border-radius: 18px;
+  box-shadow: 0 12px 40px rgba(0,0,0,.2);
+}
+
+.landing-content h1 {
+  font-size: 48px;
+  margin: 0 0 16px;
+}
+
+.landing-content p {
+  font-size: 19px;
+  line-height: 1.6;
+}
+
+.primary-btn, .cart-btn, .checkout-btn {
+  border: 0;
+  border-radius: 8px;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.primary-btn {
+  background: #237a42;
+  color: white;
+  margin-top: 14px;
+}
+
+.primary-btn:hover, .cart-btn:hover, .checkout-btn:hover {
+  opacity: .9;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 6%;
+  background: white;
+  box-shadow: 0 2px 12px rgba(0,0,0,.08);
+}
+
+.brand {
+  color: #176b39;
+  font-weight: 800;
+  font-size: 22px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 22px;
+}
+
+.nav-links a {
+  color: #244b32;
+  font-weight: 600;
+}
+
+.page {
+  padding: 30px 6%;
+}
+
+.page-title {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.category {
+  margin-bottom: 40px;
+}
+
+.category h2 {
+  border-left: 5px solid #237a42;
+  padding-left: 12px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 22px;
+}
+
+.product-card {
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 5px 18px rgba(0,0,0,.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 16px;
+  flex: 1;
+}
+
+.product-info h3 {
+  margin: 0 0 8px;
+}
+
+.price {
+  font-weight: 700;
+  color: #237a42;
+  margin-bottom: 12px;
+}
+
+.cart-btn {
+  width: 100%;
+  background: #237a42;
+  color: white;
+}
+
+.cart-btn:disabled {
+  background: #aab7ae;
+  cursor: not-allowed;
+}
+
+.cart-page {
+  padding: 30px 6%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.cart-row {
+  display: grid;
+  grid-template-columns: 100px 1fr auto auto auto;
+  gap: 18px;
+  align-items: center;
+  background: white;
+  margin-bottom: 14px;
+  padding: 14px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0,0,0,.07);
+}
+
+.cart-row img {
+  width: 100px;
+  height: 85px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantity button {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+}
+
+.delete-btn {
+  border: 0;
+  background: #b3261e;
+  color: white;
+  padding: 9px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.cart-summary {
+  text-align: right;
+  margin-top: 25px;
+}
+
+.cart-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.checkout-btn {
+  background: #237a42;
+  color: white;
+}
+
+.continue-btn {
+  background: #e7eee9;
+  color: #183b2a;
+}
+
+.empty-cart {
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.about-us {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 15px;
+  line-height: 1.7;
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .cart-row {
+    grid-template-columns: 80px 1fr;
+  }
+  .cart-row img {
+    width: 80px;
+  }
+  .cart-actions {
+    justify-content: center;
+  }
+}
